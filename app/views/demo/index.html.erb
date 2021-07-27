@@ -1,0 +1,19 @@
+<h1>Index Page</h1>
+<% @array.each do |item|%>
+
+<ul>    
+<li><%= item %></li>
+</ul>
+<% end %></br>
+
+<%= link_to("Go to hello page", {:action => 'hello'}) %></br>
+<a href='/demo/hello'>Go to heloo page via ahref</a></br>
+<%= link_to("Go to about page", {:action => 'about'}) %></br>
+<%= link_to("Go to contact page", {:action => 'contact'}) %></br>
+
+
+ID: <%= params[:id] %></br>
+Page: <%= @page %></br>
+Next Page: <%= @page.to_i + 1 %>
+
+
