@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_121039) do
+ActiveRecord::Schema.define(version: 2021_07_27_123126) do
+
+  create_table "pages", force: :cascade do |t|
+    t.integer "subject_id"
+    t.string "name"
+    t.string "permalink"
+    t.integer "position"
+    t.boolean "visible"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_pages_on_subject_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.boolean "visible"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
