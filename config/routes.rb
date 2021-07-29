@@ -1,7 +1,31 @@
 Rails.application.routes.draw do
-  get 'demo/index'
+  
+
+  root 'demo#index'
   get 'demo/hello'
   get 'demo/contact'
   get 'demo/about'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :subjects do 
+    member do
+      get :delete
+    end
+  end    
+
+  resources :pages do 
+    member do
+      get :delete
+    end
+  end    
+
+  #get 'pages/new'
+  #get 'pages/index'
+  #get 'pages/show'
+  #get 'pages/edit'
+  #get 'pages/delete'
+  #get 'subjects/new'
+  #get 'subjects/index'
+  #get 'subjects/show'
+  #get 'subjects/edit'
+  #get 'subjects/delete'
 end
