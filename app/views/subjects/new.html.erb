@@ -1,2 +1,11 @@
 <h1>Subjects#new</h1>
-<p>Find me in app/views/subjects/new.html.erb</p>
+<h2>Add new subject here</h2>
+<%= form_for(@subject) do |f| %>
+    <p>Subject Name:
+    <%= f.text_field(:name) %></p>
+    <p>Positon
+    <%= f.text_field(:position) %></p>
+    <p>Visible
+    <%= f.text_field(:visible) %></p>
+    <%= f.submit("Add subject") %>    
+<% end %>

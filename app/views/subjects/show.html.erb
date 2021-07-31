@@ -1,2 +1,14 @@
+<div style="text-align: center;">
 <h1>Subjects#show</h1>
+
+<p>Name: <%= @subject.name%></p>
+<p>Position: <%= @subject.position%></p>
+<p>Size: <%= @subject.pages.size%></p>
+<p>Readable: <%= @subject.visible %></p>
 <p><%= link_to("Edit subject", edit_subject_path(@subject)) %></p>
+
+</div>
+
+
+
+

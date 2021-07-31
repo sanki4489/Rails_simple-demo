@@ -1,2 +1,8 @@
 <h1>Subjects#delete</h1>
-<p>Find me in app/views/subjects/delete.html.erb</p>
+<h2>Delete subject here</h2>
+<%= form_for(@subject, :method => "delete") do |f| %>
+    <h3>Are you sure you want to delete this record?</h3>
+    <p>Subject Name:
+    <%= @subject.name %></p>
+    <%= f.submit("Delete subject") %>    
+<% end %>
