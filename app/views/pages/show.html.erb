@@ -1,2 +1,17 @@
+<div style="text-align: center;">
 <h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+
+<p>Name: <%= @page.subject.name %></p>
+<p>Name: <%= @page.name %></p>
+<p>Position: <%= @page.position %></p>
+<p>Size: <%= @page.permalink %></p>
+<p>Readable: <%= @page.visible %></p>
+<p>Content: <%= @page.content %></p>
+<p>Created at: <%= @page.created_at %></p>
+<p><%= link_to("Edit page", edit_page_path(@page)) %></p>
+
+</div>
+
+
+
+

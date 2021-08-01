@@ -1,2 +1,20 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div style="text-align: center;">
+
+<h1>All Available Pagess</h1>
+<h2><%= link_to("Add new subject", new_page_path, :class => "action new") %></h2>
+<p>Check the first page directly: 
+<%= link_to("show Page", page_path(1)) %></p>
+<div style="border: 3px solid green;">
+<% @page.each do |page| %>
+<p><%= page.name %>
+<%= page.subject.name %>
+<%= page.position %>
+<%= page.visible ? 'yes' : 'No' %>
+<%= link_to("show", page_path(page), :class => "action show") %>
+<%= link_to("edit", edit_page_path(page), :class => "action edit") %>
+<%= link_to("delete", delete_page_path(page), :class => "action delete") %>
+</p>
+
+<% end %>
+</div>
+</div>

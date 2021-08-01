@@ -1,2 +1,17 @@
 <h1>Pages#new</h1>
-<p>Find me in app/views/pages/new.html.erb</p>
+<h2>Add new pages here</h2>
+<%= form_for(@page) do |f| %>
+    <p>Subject ID:
+    <%= f.text_field(:subject_id) %></p>
+    <p>page Name:
+    <%= f.text_field(:name) %></p>
+    <p>Permalink
+    <%= f.text_field(:permalink) %></p>
+    <p>Positon
+    <%= f.text_field(:position) %></p>
+    <p>Visible
+    <%= f.text_field(:visible) %></p>
+    <p>content
+    <%= f.text_area(:content, :rows => 10, :cols => 60) %></p>
+    <%= f.submit("Add subject") %>    
+<% end %>

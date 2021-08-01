@@ -1,2 +1,15 @@
 <h1>Pages#edit</h1>
-<p>Find me in app/views/pages/edit.html.erb</p>
+<h2>Edit pages here</h2>
+<%= form_for(@page) do |f| %>
+    <p>page Name:
+    <%= f.text_field(:name) %></p>
+    <p>Positon
+    <%= f.text_field(:position) %></p>
+    <p>Visible
+    <%= f.text_field(:visible) %></p>
+    <p>Permalink
+    <%= f.text_field(:permalink) %></p>
+    <p>content
+    <%= f.text_field(:content) %></p>
+    <%= f.submit("Edit subject") %>    
+<% end %>
