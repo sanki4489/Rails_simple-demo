@@ -10,6 +10,7 @@ class SubjectsController < ApplicationController
     @subject.save
     #check if new subject is created or not
     if @subject.save
+      flash[:notice] = "The subject field is created."
       #redirect to index page
       redirect_to(subjects_path)
     else
